@@ -1,0 +1,10 @@
+<!-- question.component.html -->
+
+<div>
+    <p>{{ question.text }}</p>
+    <ul>
+      <li *ngFor="let option of question.options; let i = index" (click)="selectOption(i)" [class.selected]="selectedOption === i">
+        {{ option }}
+      </li>
+    </ul>
+</div>
