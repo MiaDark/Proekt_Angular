@@ -10,7 +10,7 @@ import { NgFor } from '@angular/common';
 })
 export class QuestionComponent implements OnInit {
   @Input() question: any;
-  @Input() questionIndex!: number; // Add "!" to indicate it will be initialized
+  @Input() questionIndex!: number; 
 
   @Output() optionSelected = new EventEmitter<{ optionIndex: number, questionIndex: number }>();
 

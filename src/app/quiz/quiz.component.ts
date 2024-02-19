@@ -24,13 +24,13 @@ export class QuizComponent implements OnInit{
   onOptionSelected(optionIndex: number, questionIndex: number) {
     const selectedOption = this.questions[questionIndex].options[optionIndex];
 
-    // Check if the selected option is correct
+    // Проверка дали е точен одговорот
     if (selectedOption === this.questions[questionIndex].options[this.questions[questionIndex].correct]) {
       this.score++;
     }
   }
 
-  submitQuiz() {
+  submitQuiz() {//Колку поени се освоени.
     alert(`Your score is: ${this.score}/${this.questions.length}`);
   }
 }
